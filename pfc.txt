@@ -1,0 +1,24 @@
+"DEBUT"
+#On admet une fonction randint qui prends en paramètres deux entiers, x et y et qui retourne un entier aléatoire compris entre x et y inclus
+#On admet une fonction input qui prends en paramètres un texte et retourne la réponse que l'utilisateur a tapé
+#On définit une fonction pierre_feuille_ciseaux sans paramètres qui simule une partie à trois points contre un bot
+    #On initialise la variable score_joueur à 0
+    #On initialise la variable score_ordi à 0
+    #Tant que score_joueur est inférieur à 3 ET que score_ordi est inférieur à 3
+        #Alors on définit la variable joueur qui est égal au renvoie de la fonction input avec comme paramètre "pierre = 0, feuille = 1, ciseaux = 2"
+        #Tant que joueur n'est pas compris entre 0 et 2 inclus
+            #Alors on associe à joueur le renvoie de la fonction input avec comme paramètre "Veillez rentrer une valeur comprise entre 0 et 2 inclus"
+        #On définit une variable ordi qui est égal au renvoie de la fonction randit avec comme paramètres 0 et 2
+        #Si joueur est égal à ordi
+            #Alors on affiche "C'est une égalité"
+        #Sinon Si joueur + 1 % 3 est égal à ordi
+            #Alors on affiche "Tu as perdu"
+            #On incrémente la variable score_ordi de 1
+        #Sinon
+            #Alors on affiche "Tu as gagné"
+            #On incrémente la variable score_joueur de 1
+    #Si score_joueur est égal à 3
+        #Alors on renvoie "Tu as gagné la partie, GG!"
+    #On renvoie "Tu as perdu la partie, RIP Bozo!"
+#On execute la fonction pierre_feuille_ciseaux
+"FIN"
