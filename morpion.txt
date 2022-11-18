@@ -1,0 +1,53 @@
+"DEBUT"
+#On admet une fonction input qui prends en paramètres un texte et retourne la réponse que l'utilisateur a tapé
+#On définit une variable jeu qui est égal à un dictionnaire vide
+#On définit une fonction aligne qui détermine si 3 signes sont alignes et qui prends en paramètres une case
+    #On initialise une variable ligne à 0
+    #On initialise une variable colonne à 0
+    #On initialise une variable diagonale à 0
+    #On initialise une variable i à 0
+    #Tant que i est inférieur à 8
+        #On définit une variable coordonnes égal à l'élèment d'index i dans la liste des clès de jeu
+        #Si coordonnees est différent de case
+            #Alors Si coordonnees est case sont sur la meme colonne
+                #Alors Si la valeur de clé coordonnees est égale à la valeur de clé case
+                    #Alors on incrémente colonne de 1
+            #Si coordonnees est case sont sur la meme ligne
+                #Alors Si la valeur de clé coordonnees est égale à la valeur de clé case
+                    #Alors on incrémente ligne de 1
+            #Si case et coordonnees sont sur la meme diagonale
+                #Alors Si la valeur de clé coordonnees est égale à la valeur de clé case
+                    #Alors on incrémente diagonale de 1
+    #Si ligne est égale à 2 ou que colonne est égale à 2 ou que diagonale est égale à 2
+        #Alors on renvoie True
+    #Sinon on renvoie False
+#On définit une fonction morpion qui lance une partie de morpion entre deux joueurs et qui ne prends pas de paramètres
+    #On initialise la variable victoire à False
+    #On initialise la variable egalite à False
+    #On initialise une variable tour à -1
+    #On remplie le dictionnaire jeu avec les coordonnées de chaque case
+    #Tant que victoire est égal à False et que egalite est egale à False
+        #Alors On incremente la variable tour de 1
+        #Si la valeur de tour est pair
+            #Alors on définit la variable j1 qui est égal au renvoie de la fonction input avec comme paramètres "Choisis un duo de coordonnées (x, y) : "
+            #Tant que j1 n'est pas une coordonnees valide
+                #Alors on associe à j1 le renvoie de la fontion input avec comme paramètres "Choisis un duo de coordonnées (x, y) valide STP. "
+            #On associe à la valeur de clé j1 dans jeu la valeur "O"
+            #On associe à victoire le renvoie de la fonction aligne avec comme paramètre j1
+            #On affiche le jeu
+        #Sinon
+            #Alors on définit la variable j2 qui est égal au renvoie de la fonction input avec comme paramètres "Choisis un duo de coordonnées (x, y) : "
+            #Tant que j2 n'est pas une coordonnees valide
+                #Alors on associe à j2 le renvoie de la fontion input avec comme paramètres "Choisis un duo de coordonnées (x, y) valide STP. "
+            #On associe à la valeur de clé j2 dans jeu la valeur "X"
+            #On associe à victoire le renvoie de la fonction aligne avec comme paramètre j2
+            #On affiche le jeu
+        #Si la variable tour est égale à 8
+            #On affiche "C'est une égalité ! Domaj"
+            #On associe True à la variable egalite
+    #Si la variable victoire est égale à True
+        #Alors si la variable tour est partie
+            #Alors on affiche "Bravo J1 tu as gagné ! Sale BG"
+        #Sinon on affiche "Bravo J2 tu as gangé ! Gigachad"
+#On execute la fonction morpion
+"FIN"
