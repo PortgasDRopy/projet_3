@@ -2,6 +2,7 @@ from operator import xor
 jeu = {}
 
 def aligne(case):
+    '''Renvoie True si l'un des deux joueurs à gagner, False sinon'''
     ligne = 0
     colonne = 0
     diagonale = 0
@@ -22,6 +23,7 @@ def aligne(case):
     return False
 
 def morpion():
+    '''Simule une partie de morpion entre deux joueurs'''
     victoire = False
     egalite = False
     tour = -1
